@@ -1,133 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>União - Grupo de Jogadores BR</title>
-<style>
-  /* Reset básico */
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  body {
-    background: #121212;
-    color: #eee;
-    line-height: 1.6;
-  }
-  header {
-    background: #1f1f1f;
-    padding: 20px 30px;
-    text-align: center;
-    border-bottom: 2px solid #e63946;
-  }
-  header h1 {
-    font-weight: 900;
-    color: #e63946;
-    letter-spacing: 2px;
-  }
-  main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-  section {
-    margin-bottom: 40px;
-  }
-  h2 {
-    border-bottom: 3px solid #e63946;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    font-weight: 700;
-    font-size: 1.8rem;
-  }
-  p {
-    font-size: 1.1rem;
-    color: #ccc;
-  }
-  ul {
-    margin-top: 10px;
-    padding-left: 20px;
-    color: #ccc;
-  }
-  li {
-    margin-bottom: 10px;
-  }
-  .symbols {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    font-size: 3rem;
-  }
-  .symbol-desc {
-    max-width: 280px;
-    background: #222;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 0 15px rgba(230, 57, 70, 0.3);
-  }
-  footer {
-    text-align: center;
-    padding: 20px 0;
-    color: #666;
-    font-size: 0.9rem;
-  }
-  @media(max-width: 600px){
-    .symbols {
-      flex-direction: column;
-      font-size: 2.5rem;
-      gap: 20px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>União - Grupo BR</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-  }
-</style>
+    body {
+      background: #121212;
+      color: #eee;
+      line-height: 1.6;
+      animation: fadeIn 1s ease-in-out;
+    }
+    header {
+      background: #1f1f1f;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 2px solid #e63946;
+    }
+    header h1 {
+      color: #e63946;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      animation: slideDown 1s ease;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 40px;
+      animation: fadeUp 1s ease;
+    }
+    h2 {
+      color: #e63946;
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+      border-left: 5px solid #e63946;
+      padding-left: 10px;
+    }
+    p, li {
+      font-size: 1rem;
+      color: #ccc;
+    }
+    .symbols {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .symbol-desc {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      background: #1e1e1e;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(230, 57, 70, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .symbol-desc:hover {
+      transform: scale(1.05);
+    }
+    .symbol-desc div {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .symbol-desc strong {
+      color: #e63946;
+      display: block;
+      margin-bottom: 8px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #333;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @media(max-width: 600px){
+      .symbols {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-  <h1>União - Grupo de Jogadores BR</h1>
-</header>
-<main>
-  <section id="about">
-    <h2>O Que é a União 🎮✨</h2>
-    <p>A União é um grupo criado para reunir jogadores brasileiros 🇧🇷 que gostam de jogar em equipe, conversar e se organizar para tornar as partidas mais divertidas e envolventes. Aqui você encontra um espaço para jogar em grupo, conhecer outros players e participar de divisões com focos próprios — tudo dentro de uma comunidade estruturada, indo muito além das partidas aleatórias.</p>
-  </section>
-  <section id="symbols">
-    <h2>Os Símbolos da União 🛡️</h2>
-    <div class="symbols">
-      <div class="symbol-desc">
-        <div>〆</div>
-        <strong>Divisão de Jogo em Grupo 👥</strong>
-        <p>Focada em jogar em equipe, com destaque para Murder Mystery 🔪, mas aberta a outros modos.</p>
+  <header>
+    <h1>União - Jogadores BR</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Sobre a União 🎮</h2>
+      <p>União é uma comunidade que reúne jogadores brasileiros que gostam de jogar juntos, conversar e se conectar. Aqui, criamos grupos, organizamos partidas e montamos divisões com propósitos diferentes.</p>
+    </section>
+
+    <section>
+      <h2>Divisões 🛡️</h2>
+      <div class="symbols">
+        <div class="symbol-desc">
+          <div>〆</div>
+          <strong>Jogo em Grupo 👥</strong>
+          <p>Foco em modos como Murder Mystery 🔪, jogando em time e com organização.</p>
+        </div>
+        <div class="symbol-desc">
+          <div>㊅</div>
+          <strong>Divisão Oculta 🔒</strong>
+          <p>Será revelada no momento certo, apenas para quem for escolhido.</p>
+        </div>
+        <div class="symbol-desc">
+          <div>∰</div>
+          <strong>Divisão Oculta 🔒</strong>
+          <p>Informações restritas. Mais detalhes serão mostrados no futuro.</p>
+        </div>
       </div>
-      <div class="symbol-desc">
-        <div>㊅</div>
-        <strong>Divisão Oculta 🔒</strong>
-        <p>Significado ainda secreto, será revelado na hora certa.</p>
-      </div>
-      <div class="symbol-desc">
-        <div>∰</div>
-        <strong>Divisão Oculta 🔒</strong>
-        <p>Significado ainda secreto, será revelado na hora certa.</p>
-      </div>
-    </div>
-  </section>
-  <section id="rules">
-    <h2>Regras Básicas 📜</h2>
-    <ul>
-      <li>Respeito sempre entre todos.</li>
-      <li>Evite spam e flood no chat.</li>
-      <li>Jogue limpo, nada de trapaça.</li>
-      <li>Evite ofensas e tretas desnecessárias.</li>
-      <li>Se não curte o modo Murder, esse não é o grupo para você.</li>
-    </ul>
-  </section>
-  <section id="contact">
-    <h2>Contato & Informações 📬</h2>
-    <p>Quer entrar na União ou tirar dúvidas? Fale comigo pelo Discord: <strong>SeuUser#1234</strong></p>
-  </section>
-</main>
-<footer>
-  &copy; 2025 União - Todos os direitos reservados
-</footer>
+    </section>
+
+    <section>
+      <h2>Regras Rápidas 📜</h2>
+      <ul>
+        <li>Respeito entre os membros.</li>
+        <li>Sem flood, spam ou tretas.</li>
+        <li>Sem cheats ou atitudes tóxicas.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Como Entrar 🚪</h2>
+      <p>Se você foi convidado, já faz parte dos escolhidos. Fique atento e aproveite sua chance de participar da União.</p>
+    </section>
+  </main>
+  <footer>
+    Feito por Naytê © 2025 - União
+  </footer>
 </body>
 </html>
